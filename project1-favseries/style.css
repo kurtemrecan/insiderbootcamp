@@ -19,7 +19,7 @@ html {
 
 header {
   position: relative;
-  height: 100vh;
+  min-height: calc(100vh + 90px);
   display: flex;
   align-items: flex-end;
   background-color: rgba(0, 0, 0, 0.5);
@@ -147,6 +147,7 @@ main {
   display: flex;
   flex-direction: column;
   gap: 30px;
+  padding-top: 90px;
   padding-bottom: 90px;
 }
 
@@ -198,6 +199,7 @@ main {
   font-size: 20px;
 }
 
+/* char */
 .char-section {
   display: flex;
   flex-direction: column;
@@ -206,7 +208,7 @@ main {
   background: linear-gradient(to bottom rgb(210, 210, 211) 130%, #000 35%);
 }
 
-.char-title {
+.sec-title {
   margin: 0;
   font-size: 24px;
   display: flex;
@@ -335,7 +337,7 @@ iframe {
 footer {
   text-align: center;
   padding: 20px;
-  background-color: #333;
+  background: linear-gradient(to bottom, #000000, #808080);
   width: 100%;
 }
 
@@ -413,5 +415,23 @@ footer {
 
   .menu-toggle:checked + .menu-toggle-label .bar:nth-child(3) {
     transform: rotate(-45deg) translate(5px, -5px);
+  }
+
+  .about-assets {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .about-assets .title a {
+    width: 100%;
+  }
+
+  .aciklama {
+    font-size: 15px;
+  }
+  .char-container {
+    justify-items: center;
   }
 }
