@@ -78,9 +78,13 @@
       </div>
     </header>
     <main>
-      <section id="characters" class="char-section container">
-        <div class="container char-title">
+      <section class="container char-section id="characters" ">
+        <div class="container char-title fade-in">
+          <span class="axe axe-reverse">
+            <img src="./assets/axe.png" alt="axe"/>
+          </span>
           <h2>Characters</h2>
+          <span class="axe"><img src="./assets/axe.png" alt="axe" /></span>
         </div>
         <div class="char-container">
           <div class="char-card">
@@ -168,7 +172,41 @@
           </div>
         </div>
       </section>
+
+      <section class="container fav-scene" id="scene">
+        <h2>Favorite Scene</h2>
+        <div class="scene-container">
+          <h3 class="scene-title">Ragnar’s Death - Snake Pit Scene</h3>
+          <p>This scene is one of the most emotional and epic moments of the series. Ragnar’s death triggered a great war in the Viking world, and his sons invaded England to avenge him.</p>
+        </div>
+      </section>
     </main>
     <footer></footer>
+
+    <script>
+      const favBtn = document.querySelector('.fav-btn');
+
+      favBtn.addEventListener('click', () => {
+        const favBtnIcon = favBtn.querySelector('i');
+        const text = favBtn.querySelector('span');
+
+        favBtnIcon.classList.toggle('fa-regular');
+        favBtnIcon.classList.toggle('fa-solid');
+
+        text.textContent = favBtnIcon.classList.contains('fa-solid')
+          ? 'REMOVE FROM FAVORITES'
+          : 'ADD TO FAVORITES';
+      });
+
+      document.addEventListener('scroll', () => {
+        const elements = document.querySelectorAll('.fade-in');
+        elements.forEach((el) => {
+          const rect = el.getBoundingClientRect();
+          if (rect.top < window.innerHeight * 0.75) {
+            el.classList.add('visible');
+          }
+        });
+      });
+    </script>
   </body>
 </html>
