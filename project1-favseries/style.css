@@ -1,0 +1,254 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  border: 1 px solid orange;
+  color: azure;
+}
+body {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+header {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  align-items: flex-end;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+header::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, #000000 100%);
+}
+
+main {
+  background: linear-gradient(to bottom, #000 15%, rgb(210, 210, 211) 190%);
+}
+
+.video-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -2;
+}
+
+#about {
+  scroll-margin-top: 150px; /* Navbar'ı sabitlediğim için scroll navbar boşluğunu hesaba katmıyordu, bu yüzden böyle bir ekstra ekledik */
+}
+.container {
+  width: 90%;
+  margin: 0 auto;
+  padding: 20px;
+}
+.header-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 90px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  z-index: 1000;
+  border-bottom: transparent;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.95) 0%,
+    rgba(0, 0, 0, 0.7) 30%,
+    rgba(0, 0, 0, 0.5) 50%,
+    rgba(0, 0, 0, 0) 100%
+  );
+}
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+.logo img {
+  height: 130px;
+  padding: 30px;
+  margin-right: 20px;
+}
+.navbar ul {
+  display: flex;
+  list-style: none;
+  gap: 50px;
+}
+.navbar a {
+  text-decoration: none;
+  color: azure;
+  transition: color 0.3s ease-in-out;
+}
+.navbar a:hover {
+  color: darkgray;
+  font-weight: 500;
+}
+
+.hero-img {
+  width: 100%;
+  height: auto;
+}
+
+.profile {
+  font-size: 20px;
+  color: azure;
+  cursor: pointer;
+}
+
+.fav-btn {
+  font-size: 16px;
+  font-weight: 600;
+  display: flex;
+  background: rgba(255, 255, 255, 0.6);
+  border: none;
+  padding: 10px;
+  border-radius: 8px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  align-self: flex-start;
+  cursor: pointer;
+}
+
+.fav-btn:hover {
+  background: rgba(255, 255, 255, 1);
+}
+
+.fav-btn * {
+  color: #000;
+}
+
+.fav-btn i {
+  font-size: 23px;
+}
+
+.about {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding-bottom: 90px;
+}
+
+.about-assets {
+  display: grid;
+  gap: 50px;
+  grid-template-columns: 40% 60%;
+}
+
+.poster-title {
+  display: flex;
+  justify-content: flex-end;
+  font-size: 100px;
+}
+.poster {
+  width: 100%;
+  height: auto;
+  text-align: left;
+}
+
+.poster img {
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+  box-shadow: 0px 0px 36px -8px rgb(25, 22, 22);
+}
+
+.title {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.title-link {
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.3s ease-in-out;
+  width: 80%;
+  text-align: left;
+}
+
+.title-link:hover {
+  color: darkgray;
+}
+.aciklama {
+  display: flex;
+  text-align: left;
+  font-size: 20px;
+}
+
+.char-section {
+  display: flex;
+  flex-direction: column;
+  padding: 50px 0;
+  text-align: center;
+  background: linear-gradient(to bottom rgb(210, 210, 211) 130%, #000 35%);
+}
+
+.char-title {
+  font-size: 24px;
+  display: flex;
+  align-items: flex-start;
+}
+
+.char-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 30px;
+}
+
+.char-card {
+  width: 250px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 15% 85% 5% 95% / 87% 10% 40% 13%;
+  overflow: hidden;
+  padding: 15px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.char-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(255, 255, 255, 0.2);
+}
+
+.char-image img {
+  height: 400px;
+  width: 220px;
+  border-radius: 15% 85% 5% 95% / 87% 10% 90% 13%;
+  object-fit: cover;
+}
+
+.char-info {
+  margin-top: 10px;
+}
+
+.char-info h3 {
+  margin: 5px 0;
+  font-size: 20px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.char-info p {
+  font-size: 14px;
+  color: #ddd;
+}
