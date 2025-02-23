@@ -15,28 +15,32 @@
       <video class="video-bg" autoplay muted loop>
         <source src="./assets/header-video.mp4" type="video/mp4" />
       </video>
+
       <div class="header-nav">
-        <div class="nav-left">
+        <div class="nav-group">
           <a href="https://www.imdb.com/title/tt2306299/" target="_blank">
-            <div class="logo">
-              <img src="./assets/logo.png" alt="series-logo" />
-            </div>
+            <img class="logo" src="./assets/logo.png" alt="series-logo" />
           </a>
 
-          <nav class="navbar">
-            <div class="menu-toggle">
-              <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#characters">Characters</a></li>
-                <li><a href="#scenes">Scenes</a></li>
-                <li><a href="#contact">Contact</a></li>
-              </ul>
-            </div>
-          </nav>
-        </div>
+          <input type="checkbox" id="menu-toggle" class="menu-toggle" />
+          <label for="menu-toggle" class="menu-toggle-label">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </label>
 
-        <div class="profile">
-          <i class="fa-solid fa-user fa-lg"></i>
+          <nav id="menu" class="navbar">
+            <ul>
+              <li><a href="#about">About</a></li>
+              <li><a href="#characters">Characters</a></li>
+              <li><a href="#scenes">Scenes</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </nav>
+
+          <div class="profile">
+            <i class="fa-solid fa-user fa-lg"></i>
+          </div>
         </div>
       </div>
 
@@ -77,11 +81,12 @@
         </button>
       </div>
     </header>
+
     <main>
-      <section class="container char-section id="characters" ">
-        <div class="container char-title fade-in">
+      <section class="container char-section" id="characters">
+        <div class="char-title fade-in">
           <span class="axe axe-reverse">
-            <img src="./assets/axe.png" alt="axe"/>
+            <img src="./assets/axe.png" alt="axe" />
           </span>
           <h2>Characters</h2>
           <span class="axe"><img src="./assets/axe.png" alt="axe" /></span>
@@ -173,15 +178,103 @@
         </div>
       </section>
 
-      <section class="container fav-scene" id="scene">
-        <h2>Favorite Scene</h2>
-        <div class="scene-container">
-          <h3 class="scene-title">Ragnar’s Death - Snake Pit Scene</h3>
-          <p>This scene is one of the most emotional and epic moments of the series. Ragnar’s death triggered a great war in the Viking world, and his sons invaded England to avenge him.</p>
+      <section class="container favorite-scene">
+        <div class="char-title fade-in">
+          <span class="axe axe-reverse">
+            <img src="./assets/axe.png" alt="axe" />
+          </span>
+          <h2>Favorite Scene</h2>
+          <span class="axe"><img src="./assets/axe.png" alt="axe" /></span>
+        </div>
+        <div class="video-container">
+          <div>
+            <iframe
+              width="560"
+              height="315"
+              src="https://www.youtube.com/embed/VnHXGSYqC9g?si=-cloX8qxwzLiaDtm"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <p>
+            Ragnar returns victorious from England, but Jarl Haraldson feels
+            threatened by his rise. To weaken him, Haraldson captures Rollo and
+            brutally tortures him. This episode highlights themes of betrayal,
+            loyalty, and power struggles as Ragnar faces a major test of his
+            strength and leadership.
+          </p>
+        </div>
+      </section>
+
+      <section class="container best-episodes" id="scenes">
+        <div class="char-title fade-in">
+          <span class="axe axe-reverse">
+            <img src="./assets/axe.png" alt="axe" />
+          </span>
+          <h2>Episodes</h2>
+          <span class="axe"><img src="./assets/axe.png" alt="axe" /></span>
+        </div>
+        <div class="container episodes-container">
+          <div class="episode">
+            <img src="assets/episode1.jpg" alt="Episode 1" />
+            <h3>Ragnar's Death</h3>
+            <h3>Season 4, Episode 15</h3>
+
+            <p>
+              Ragnar meets his fate in the snake pit, delivering his final
+              words.
+            </p>
+          </div>
+          <div class="episode">
+            <img src="assets/episode2.jpg" alt="Episode 2" />
+            <h3>Bjorn’s Last Stand</h3>
+            <h3>Season 6, Episode 11</h3>
+            <p>
+              Fatally wounded, Bjorn rides one last time to inspire his people.
+            </p>
+          </div>
+          <div class="episode">
+            <img src="assets/episode3.png" alt="Episode 3" />
+            <h3>The Siege of Paris</h3>
+            <h3>Season 3, Episode 8</h3>
+            <p>
+              Ragnar and the Vikings attempt to take over Paris in an epic
+              battle.
+            </p>
+          </div>
+          <div class="episode">
+            <img src="assets/episode4.png" alt="Episode 4" />
+            <h3>Ivar vs Heahmund</h3>
+            <h3>Season 5, Episode 10</h3>
+            <p>Ivar the Boneless faces the fierce warrior Bishop Heahmund.</p>
+          </div>
+          <div class="episode">
+            <img src="assets/episode5.jpg" alt="Episode 5" />
+            <h3>Ragnar vs Rollo</h3>
+            <h3>Season 4, Episode 10</h3>
+            <p>
+              The brothers engage in an intense battle as Rollo defends Paris.
+            </p>
+          </div>
         </div>
       </section>
     </main>
-    <footer></footer>
+
+    <footer id="contact">
+      <p>
+        <a href="www.linkedin.com/in/emrecankurt" target="_blank">LinkedIn</a> |
+        <a href="https://github.com/kurtemrecan" target="_blank">GitHub</a> |
+        <a
+          href="https://my-portfolio-site-seven-kappa.vercel.app/"
+          target="_blank"
+          >Portfolio Website</a
+        >
+      </p>
+      <p>&copy; 2025 Emre Can Kurt. Tüm hakları saklıdır.</p>
+    </footer>
 
     <script>
       const favBtn = document.querySelector('.fav-btn');
