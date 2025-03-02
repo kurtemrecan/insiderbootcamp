@@ -15,10 +15,20 @@
       <!-- görev ekleme -->
       <form id="gorevForm" class="form-container">
         <label for="baslik">Başlık:</label>
-        <input type="text" id="baslik" required />
+        <input
+          type="text"
+          id="baslik"
+          placeholder="Başlık giriniz..."
+          required
+        />
 
         <label for="aciklama">Açıklama:</label>
-        <textarea id="aciklama" rows="4" required></textarea>
+        <textarea
+          id="aciklama"
+          rows="4"
+          placeholder="Planınızı yazınız..."
+          required
+        ></textarea>
 
         <fieldset>
           <legend>Öncelik:</legend>
@@ -47,14 +57,13 @@
         <ul id="gorevListesi"></ul>
       </div>
     </main>
-    <!-- 
-      <footer>
+
+    <footer>
       <p>
         &copy; 2025 Görev Listesi Uygulaması | Emre Can Kurt | Tüm Hakları
         Saklıdır
       </p>
     </footer>
-    -->
 
     <script src="script.js"></script>
   </body>

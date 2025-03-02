@@ -1,13 +1,13 @@
 :root {
   --primary-color: #6a11cb;
   --secondary-color: #6c757d;
-  --background-color: #f8f9fa;
 }
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
+  border: 2px solid orange;
 }
 
 body {
@@ -37,10 +37,11 @@ main {
   flex: 1;
   background: white;
   max-height: 350px;
-  padding: 15px;
+  padding: 15px 10px 20px 10px;
   border-radius: 7px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
+
 .liste-container {
   overflow-y: auto;
 }
@@ -57,8 +58,11 @@ textarea {
   width: 100%;
   margin-top: 5px;
   border: 1px solid var(--secondary-color);
-  border-radius: 7px;
+  border-radius: 4px;
   font-size: 0.85rem;
+}
+#baslik {
+  height: 25px;
 }
 
 fieldset {
@@ -92,7 +96,7 @@ button {
   border: none;
   cursor: pointer;
   font-weight: bold;
-  padding: 8px 12px;
+  padding: 6px 12px;
   font-size: 0.85rem;
   border-radius: 7px;
   margin: 10px 0 5px 0;
