@@ -12,49 +12,56 @@
     </header>
 
     <main>
-      <!-- görev ekleme -->
-      <form id="gorevForm" class="form-container">
-        <label for="baslik">Başlık:</label>
-        <input
-          type="text"
-          id="baslik"
-          placeholder="Başlık giriniz..."
-          required
-        />
+      <div class="container">
+        <!-- görev ekleme -->
+        <form id="gorevForm" class="form-container">
+          <label for="baslik">Başlık:</label>
+          <input
+            type="text"
+            id="baslik"
+            placeholder="Başlık giriniz..."
+            required
+          />
 
-        <label for="aciklama">Açıklama:</label>
-        <textarea
-          id="aciklama"
-          rows="4"
-          placeholder="Planınızı yazınız..."
-          required
-        ></textarea>
+          <label for="aciklama">Açıklama:</label>
+          <textarea
+            id="aciklama"
+            rows="4"
+            placeholder="Planınızı yazınız..."
+            required
+          ></textarea>
 
-        <fieldset>
-          <legend>Öncelik:</legend>
-          <label>
-            <input type="radio" name="oncelik" value="Düşük" />
-            Düşük
-          </label>
-          <label>
-            <input type="radio" name="oncelik" value="Orta" />
-            Orta
-          </label>
-          <label>
-            <input type="radio" name="oncelik" value="Yüksek" />
-            Yüksek
-          </label>
-        </fieldset>
+          <fieldset>
+            <legend>Öncelik:</legend>
+            <label>
+              <input type="radio" name="oncelik" value="Düşük" />
+              Düşük
+            </label>
+            <label>
+              <input type="radio" name="oncelik" value="Orta" />
+              Orta
+            </label>
+            <label>
+              <input type="radio" name="oncelik" value="Yüksek" />
+              Yüksek
+            </label>
+          </fieldset>
 
-        <button type="submit">Görev Ekle</button>
-        <p id="hata-mesaji"></p>
-      </form>
+          <button type="submit">Görev Ekle</button>
+          <p id="hata-mesaji"></p>
+        </form>
 
-      <!-- listeleme -->
-      <div class="liste-container">
-        <button id="tamamlananlariGoster">Sadece Tamamlananları Göster</button>
-        <button id="onceligeGoreSirala">Önceliğe Göre Sırala</button>
-        <ul id="gorevListesi"></ul>
+        <!-- listeleme -->
+        <div class="liste-container">
+          <div class="btn-container">
+            <button id="tamamlananlariGoster">
+              Sadece Tamamlananları Göster
+            </button>
+            <button id="onceligeGoreSirala">Önceliğe Göre Sırala</button>
+          </div>
+
+          <ul id="gorevListesi"></ul>
+        </div>
       </div>
     </main>
 

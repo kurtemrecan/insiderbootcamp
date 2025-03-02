@@ -7,7 +7,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
-  border: 2px solid orange;
+  transition: all 2s ease-in-out;
 }
 
 body {
@@ -15,6 +15,8 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  height: 100vh;
+  justify-content: space-between;
 }
 
 h1 {
@@ -25,25 +27,37 @@ h1 {
 
 main {
   display: flex;
-  gap: 20px;
-  width: 90%;
-  max-width: 900px;
-  margin-top: 20px;
-  margin-bottom: 20px;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
 }
-
+.container {
+  display: flex;
+  gap: 20px;
+  padding-top: 60px;
+  min-width: 1024px;
+}
 .form-container,
 .liste-container {
   flex: 1;
   background: white;
-  max-height: 350px;
   padding: 15px 10px 20px 10px;
   border-radius: 7px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  min-width: 50%;
+}
+
+.form-container {
+  max-height: 350px;
 }
 
 .liste-container {
   overflow-y: auto;
+  min-height: 350px;
+  display: flex;
+  flex-direction: column;
+  max-height: calc(100vh - 190px);
+  height: max-content;
 }
 
 label {
@@ -60,6 +74,7 @@ textarea {
   border: 1px solid var(--secondary-color);
   border-radius: 4px;
   font-size: 0.85rem;
+  resize: none;
 }
 #baslik {
   height: 25px;
@@ -106,10 +121,22 @@ button {
 button:hover {
   background: darkblue;
 }
+.btn-container {
+  position: sticky;
+  top: 0;
+  gap: 5px;
+  padding: 10px 0;
+  display: flex;
+  justify-content: space-between;
+  z-index: 10;
+  background: white;
+  border-bottom: 1px solid #ddd;
+}
 
 #gorevListesi {
   list-style: none;
   padding: 0;
+  margin-top: 50px;
 }
 
 .bos-liste-mesaji {
