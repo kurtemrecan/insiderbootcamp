@@ -1,0 +1,167 @@
+:root {
+  --primary-color: #6a11cb;
+  --secondary-color: #6c757d;
+  --background-color: #f8f9fa;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1 {
+  font-size: 1.5rem;
+  color: white;
+  margin-top: 20px;
+}
+
+main {
+  display: flex;
+  gap: 20px;
+  width: 90%;
+  max-width: 900px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.form-container,
+.liste-container {
+  flex: 1;
+  background: white;
+  max-height: 350px;
+  padding: 15px;
+  border-radius: 7px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.liste-container {
+  overflow-y: auto;
+}
+
+label {
+  font-size: 0.9rem;
+  font-weight: bold;
+  display: block;
+  margin-top: 10px;
+}
+
+#baslik,
+textarea {
+  width: 100%;
+  margin-top: 5px;
+  border: 1px solid var(--secondary-color);
+  border-radius: 7px;
+  font-size: 0.85rem;
+}
+
+fieldset {
+  border: none;
+  padding: 0;
+  margin: 10px 0;
+}
+
+.radio-group {
+  display: flex;
+  justify-content: space-between;
+}
+
+.radio-group label {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+
+.radio-group input {
+  width: auto;
+  accent-color: var(--primary-color);
+}
+
+button {
+  width: 100%;
+  background: var(--primary-color);
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  padding: 8px 12px;
+  font-size: 0.85rem;
+  border-radius: 7px;
+  margin: 10px 0 5px 0;
+  transition: background 0.2s ease-in-out;
+}
+
+button:hover {
+  background: darkblue;
+}
+
+#gorevListesi {
+  list-style: none;
+  padding: 0;
+}
+
+.bos-liste-mesaji {
+  text-align: center;
+  font-style: italic;
+  color: var(--secondary-color);
+  margin-top: 10px;
+}
+
+.gorev-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  margin-bottom: 8px;
+  border: 1px solid #ddd;
+  border-radius: 7px;
+  font-size: 0.85rem;
+}
+
+.gorev-item button {
+  display: flex;
+  flex-direction: column;
+  width: auto;
+  padding: 5px 10px;
+  font-size: 0.8rem;
+  gap: 5px;
+}
+
+.gorev-item.tamamlandi {
+  background-color: lightgreen;
+}
+
+#hata-mesaji {
+  color: #721c24;
+  padding: 0;
+  text-align: center;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--primary-color);
+  padding: 20px;
+  color: white;
+  font-size: 0.9rem;
+  width: 100%;
+  height: 40px;
+}
+
+@media (max-width: 600px) {
+  main {
+    flex-direction: column;
+  }
+  .liste-container {
+    overflow: auto;
+  }
+}
