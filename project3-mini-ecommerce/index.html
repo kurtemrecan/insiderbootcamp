@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mini E-commerce</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div class="logo-container">
+          <img src="assets/logo.png" alt="Mini E-commerce Logo" class="logo" />
+          <h1>
+            <a href="#logoTarget" class="mini-ecommerce">Valley Wolf</a>
+          </h1>
+        </div>
+
+        <div class="header-icons">
+          <div class="search-container">
+            <input type="text" class="search-input" placeholder="Ürün ara..." />
+            <button class="search-button">
+              <i class="fas fa-search"></i>
+            </button>
+          </div>
+          <button class="btn-favorite" aria-label="Favoriler">
+            <i class="fas fa-heart"></i>
+            <span class="favorite-count">0</span>
+          </button>
+          <button class="btn-cart" aria-label="Sepet">
+            <i class="fas fa-shopping-cart"></i>
+            <span class="cart-count">0</span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- slider -->
+      <section class="main-slider" id="logoTarget" aria-label="Ürün Slider">
+        <div class="slide">
+          <img src="assets/slide1.jpg" alt="slide 1" />
+        </div>
+        <div class="slide">
+          <img src="assets/slide2.jpg" alt="Slide 2" />
+        </div>
+        <div class="slide">
+          <img src="assets/slide3.jpg" alt="Slide 3" />
+        </div>
+      </section>
+
+      <!-- ürünler -->
+      <section class="product-section" aria-label="Ürün Listesi">
+        <div class="container">
+          <div id="productList" class="product-grid"></div>
+          <button id="loadMore" class="btn-load-more">Daha Fazla Göster</button>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-section">
+            <h3>Hakkımızda</h3>
+            <p>En uygun fiyatlar ve en kaliteli ürünler!</p>
+          </div>
+          <div class="footer-section">
+            <h3>İletişim</h3>
+            <ul>
+              <li><i class="fas fa-phone"></i> +90 546 478 1881</li>
+              <li><i class="fas fa-envelope"></i> can.kurt764@gmail.com</li>
+              <li><i class="fas fa-map-marker-alt"></i> İzmir, Türkiye</li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2024 Mini Ecommerce | Tüm hakları saklıdır.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+    <script src="js/slider.js"></script>
+    <script src="js/modal.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>
