@@ -117,6 +117,15 @@ function addToFavorites(productId) {
   showFavoritesModal();
 }
 
+//tekrar bak buraya
+function removeFromFavorites(productId) {
+  let favorites = JSON.parse(localStorage.getItem('favorites')) || [];
+  favorites = favorites.filter((id) => id !== productId);
+  localStorage.setItem('favorites', JSON.stringify(favorites));
+  updateFavoritesCount();
+  updateFavoriteButton(productId);
+}
+
 function isProductFavorite(productId) {
   const favorites = JSON.parse(localStorage.getItem('favorites')) || [];
   return favorites.includes(productId);
